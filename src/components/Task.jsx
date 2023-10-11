@@ -1,6 +1,6 @@
 
 import React from 'react';
- import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
@@ -30,6 +30,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           readOnly={true}
           name="title"
           placeholder="Input title"
+         style={{ background: 'red' }}
         />
       </label>
 
@@ -47,7 +48,6 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
     </div>
   );
 }
-
  Task.propTypes = {
   /** Composition of the task */
   task: PropTypes.shape({
